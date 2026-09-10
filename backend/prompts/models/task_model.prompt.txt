@@ -1,0 +1,58 @@
+ROLE
+Generate a structured Task Model as simulation input.
+
+TASK
+Derive global task attributes, an HTA-informed interaction step sequence and a GOMS-oriented time estimate for each step.
+
+INPUT
+
+Scenario:
+{description}
+
+Task:
+{task}
+
+Scenario Dimensions:
+{scenario_dimensions}
+
+OUTPUT
+Generate all fields required by TaskModelSchema.
+
+BASE ATTRIBUTES
+- task_complexity
+- number_of_steps
+- reading_demand
+- input_demand
+- memory_demand
+- error_criticality
+- sustained_attention_demand
+- task_switching_demand
+- inhibition_demand
+- divided_attention_demand
+- unfamiliar_word_density
+- orthographic_irregularity
+- morphological_complexity
+
+INTERACTION STEPS
+The task_steps must describe the complete modeled interaction in a plausible order.
+Each step must include:
+- step_id
+- name
+- goal
+- description
+- step_type
+- estimated_duration_seconds
+- goms_operations
+- cognitive_requirements
+- possible_errors
+
+RULES
+- Output must be in English.
+- Do not derive user profiles from the scenario.
+- Do not simulate the task.
+- Use the scenario and dimensions as evidence.
+- Keep step names short and neutral.
+- Use cautious assumptions when information is missing.
+- The step sequence is an inspectable modeling hypothesis, not an empirical observation.
+- Time estimates are GOMS-oriented heuristic assumptions in seconds.
+- All 0-100 values represent internal model scores, not percentages.

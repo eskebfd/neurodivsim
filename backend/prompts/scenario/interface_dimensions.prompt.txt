@@ -1,0 +1,43 @@
+ROLE
+Extract only interface-related numerical scenario signals.
+
+INPUT
+Scenario:
+{scenario_description}
+
+Context:
+{dimension_context}
+
+OUTPUT
+Generate only the fields required by InterfaceDimensionSignalsSchema.
+
+SIGNALS
+- text_volume
+- sentence_length
+- word_difficulty
+- technical_terms
+- visual_clutter
+- navigation_complexity
+- accessibility_support
+- feedback_quality
+- text_legibility
+- text_density
+- line_tracking_difficulty
+- irrelevant_signal_load
+- feedback_interruptiveness
+- focus_guidance
+
+EACH SIGNAL CONTAINS ONLY
+- id: exactly the technical name listed above
+- name: short English name
+- value: integer on the internal 0-100 model scale
+- rationale: concise evidence-based explanation
+- scale_min_description: meaning of 0
+- scale_max_description: meaning of 100
+
+RULES
+- Output must be in English.
+- Use only interface-related evidence.
+- Do not assess task or environment attributes here.
+- Do not derive user profiles.
+- Values are model scores, not percentages.

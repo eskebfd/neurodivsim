@@ -1,0 +1,40 @@
+ROLE
+Generate a structured Environment Model as simulation input.
+
+TASK
+Derive only environmental attributes from the scenario, environment description, device context and Scenario Dimensions.
+
+INPUT
+
+Scenario:
+{description}
+
+Environment:
+{environment}
+
+Device:
+{device}
+
+Scenario Dimensions:
+{scenario_dimensions}
+
+OUTPUT
+Generate all fields required by EnvironmentModelSchema.
+
+ATTRIBUTES
+- noise_level
+- distractions
+- time_pressure
+- context_stability
+- external_interruption_frequency
+- attention_recovery_support
+- device_constraints
+- lighting_quality
+
+RULES
+- Output must be in English.
+- Describe the usage context only.
+- Do not derive user profiles from the environment.
+- Do not infer hidden environmental factors without evidence.
+- Use cautious assumptions when information is incomplete.
+- All values use the internal 0-100 model scale.

@@ -1,0 +1,24 @@
+ROLE
+Extract a compact scenario context as the first step of Scenario Dimensions analysis.
+
+INPUT
+{scenario_description}
+
+OUTPUT
+Generate only the fields required by ScenarioDimensionContextSchema. Keep all text concise.
+
+CONTEXT FIELDS
+- detected_device: Laptop, Smartphone, Tablet or Desktop
+- scenario_summary: at most two sentences
+- primary_task: complete primary task
+- task_options: at most two short options including the primary task
+- environment_options: at most two short usage contexts
+- interface_context: interface type, most relevant UI elements and process scope
+- suggested_metrics: exactly four short metric names
+
+RULES
+- Output must be in English.
+- Do not derive user profiles.
+- Do not provide a medical diagnosis and do not simulate interaction.
+- When information is missing, name plausible but cautious assumptions briefly.
+- For identical input, the same concepts and similar wording should be used.

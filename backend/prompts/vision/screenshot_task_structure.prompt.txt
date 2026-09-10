@@ -1,0 +1,23 @@
+Analyze the screenshot as preparation for later task and interface analysis.
+
+Goal:
+Describe only visible evidence or information that can reasonably be inferred from the visible UI structure. The output is used to enrich the task field and the interface field in the frontend while keeping both fields conceptually separate.
+
+Rules:
+- Interaction steps may only be derived from visible navigation, forms, controls or visible states.
+- All interaction steps must be marked as hypotheses through confidence values.
+- Steps without visual evidence must not be invented.
+- Non-visible later steps belong in missing_information.
+- No environment may be derived from the interface.
+- Task and interface must remain strictly separated:
+  - Task = what the person has to do.
+  - Interface = what the person uses and how the task is supported.
+- task_description describes the goal, visible work steps, decisions and required interactions.
+- interface_description describes visible UI elements, layout, navigation, text volume, grouping, feedback, visual density and orientation cues.
+- task_description and interface_description must not repeat the same sentences.
+- interface_description must be based only on visible evidence. Non-visible pages, technical details, user profiles or environmental conditions must not be invented.
+- For identical screenshots, the same main steps should be produced in the same order.
+- Use short, neutral step names.
+- Similar visible actions should be grouped consistently.
+
+Return a structured output with user_goal, main_task, task_description, interface_description, hta_steps, decision_points, interface_elements, visible_elements, uncertainties, missing_information and warning.

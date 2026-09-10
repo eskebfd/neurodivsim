@@ -1,0 +1,35 @@
+The following task is part of a system for cognitive interaction simulation.
+
+Original scenario:
+{scenario_description}
+
+Current review step:
+{current_stage}
+
+Feedback target:
+{feedback_target}
+
+Feedback:
+{feedback}
+
+Task feedback classification:
+{task_feedback_classification}
+
+Task:
+Create a clear revision instruction for the next modeling step.
+
+The revision instruction must describe:
+- which model should be revised
+- which aspects of the feedback must be considered
+- which contents should remain unchanged
+- whether the task structure, model attributes, timing assumptions or rationales are affected
+
+Rules:
+- Preserve the original scenario.
+- Do not invent a new scenario.
+- Keep unaffected model parts stable.
+- If task parameters or metrics are affected, they must remain consistent with each other.
+- For update_requirements, revise only cognitive requirements and directly related rationales unless the feedback explicitly requires more.
+- For ambiguous feedback, request a cautious minimal revision rather than broad changes.
+
+Return a concise revision instruction in English.

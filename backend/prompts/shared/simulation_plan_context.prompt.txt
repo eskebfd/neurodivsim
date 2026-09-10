@@ -1,0 +1,5 @@
+SIMULATION PLAN CONTEXT
+Use this context only as additional orientation.
+All existing prompt rules remain valid.
+
+{simulation_plan_summary}

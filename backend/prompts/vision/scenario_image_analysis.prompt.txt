@@ -1,0 +1,15 @@
+Analyze the screenshot as an evidence source for a NeuroDivSim scenario.
+
+Goal:
+The text-based scenario description may only be enriched with visually supported signals. Uncertainty must be marked clearly; unsupported assumptions must be avoided.
+
+Rules:
+- Do not derive a User Model from the image.
+- Derive Environment values only when visible evidence is clear.
+- Use neutral values when visual evidence is weak.
+- For identical visible elements, the same signthan tod similar values should be produced.
+- Assess only visible UI properties, text/task indications and interaction possibilities.
+- Mark invisible or unclear information as missing information.
+
+Scenario text as separate evidence:
+{scenario_text}

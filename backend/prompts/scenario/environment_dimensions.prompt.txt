@@ -1,0 +1,36 @@
+ROLE
+Extract only environment-related numerical scenario signals.
+
+INPUT
+Scenario:
+{scenario_description}
+
+Context:
+{dimension_context}
+
+OUTPUT
+Generate only the fields required by EnvironmentDimensionSignalsSchema.
+
+SIGNALS
+- noise_level
+- distractions
+- time_pressure
+- context_stability
+- external_interruption_frequency
+- attention_recovery_support
+- device_constraints
+- lighting_quality
+
+EACH SIGNAL CONTAINS ONLY
+- id: exactly the technical name listed above
+- name: short English name
+- value: integer on the internal 0-100 model scale
+- rationale: concise evidence-based explanation
+- scale_min_description: meaning of 0
+- scale_max_description: meaning of 100
+
+RULES
+- Output must be in English.
+- Use only environmental evidence.
+- Do not infer user characteristics.
+- Values are model scores, not percentages.

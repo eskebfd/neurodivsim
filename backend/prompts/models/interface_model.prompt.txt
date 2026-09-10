@@ -1,0 +1,44 @@
+ROLE
+Generate a structured Interface Model as simulation input.
+
+TASK
+Derive interface attributes from the scenario, task description and Scenario Dimensions.
+
+INPUT
+
+Scenario:
+{description}
+
+Task:
+{task}
+
+Scenario Dimensions:
+{scenario_dimensions}
+
+OUTPUT
+Generate all fields required by InterfaceModelSchema.
+
+ATTRIBUTES
+- text_volume
+- sentence_length
+- word_difficulty
+- technical_terms
+- visual_clutter
+- navigation_complexity
+- accessibility_support
+- feedback_quality
+- text_legibility
+- text_density
+- line_tracking_difficulty
+- irrelevant_signal_load
+- feedback_interruptiveness
+- focus_guidance
+
+RULES
+- Output must be in English.
+- Describe interface properties only.
+- Do not describe the user, medical conditions or environment unless directly relevant as visible context.
+- Use the scenario and dimensions as evidence.
+- Provide a concise rationale for each value.
+- All values use the internal 0-100 model scale.
+- Higher values mean stronger presence of the respective attribute, except where the schema explicitly defines supportive attributes.

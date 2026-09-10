@@ -1,0 +1,26 @@
+Classify free-text feedback on the existing HTA structure of a Task Model.
+
+Original scenario:
+{scenario_description}
+
+Current Task Model:
+{current_task_model}
+
+Feedback:
+{feedback}
+
+Task:
+Assign the feedback to exactly one type of change.
+
+Possible change types:
+- add_step: a previously missing interaction step should be added.
+- update_step: an existing step should be adjusted, expanded or specified more precisely.
+- remove_step: an existing step is incorrect or not required.
+- reorder_steps: the order of existing steps should be changed.
+- split_step: an existing step is too broad and should be split into multiple steps.
+- merge_steps: multiple existing steps should be combined.
+- update_timing: only GOMS operations or timing assumptions of an existing step should be adjusted.
+- update_requirements: cognitive requirements of an existing step should be adjusted.
+- ambiguous: the feedback is not specific enough.
+
+Return only the structured classification required by the schema.

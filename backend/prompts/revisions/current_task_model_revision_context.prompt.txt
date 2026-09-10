@@ -1,0 +1,6 @@
+CURRENT TASK MODEL FOR REVISION
+Use this current Task Model as the binding basis for structural revisions.
+Existing interaction steps must not be removed unless the revision explicitly requires this.
+Return the complete updated Task Model afterward.
+
+{current_task_model}
